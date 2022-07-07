@@ -48,7 +48,7 @@ h1::after {
     border: 2px solid rgb(51, 51, 51);
     background: #272530;
     border-radius: 1rem;
-    box-shadow: 4px 6px 5px 7px #222;
+    box-shadow: 4px 6px 5px 7px rgb(37, 37, 37);
     width: 35rem;
     margin-top: .5rem;
     padding: 3rem
