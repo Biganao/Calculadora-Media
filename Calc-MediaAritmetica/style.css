@@ -1,17 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
-@media all and (max-width: 800px) and (max-height: 600px) {
-    body,.content{
-        overflow-y: hidden;
-    }
-    .content{
-        padding: 1rem;
-        margin: 3.5rem;
-        width: 7rem;
-        height: 31.5rem;
-    }
-}
-
 
 * {
     margin: 0;
@@ -41,7 +29,7 @@ h1::after {
 }
 
 .content {
-    display: flex;
+    display: flex;    
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -49,9 +37,12 @@ h1::after {
     background: #272530;
     border-radius: 1rem;
     box-shadow: 4px 6px 5px 7px rgb(37, 37, 37);
-    width: 35rem;
-    margin-top: .5rem;
-    padding: 3rem
+    min-width: 10rem;
+    max-width: 35rem;
+    min-height: 5rem;
+    max-height: 50rem;
+    margin-top: 2.5rem;
+    padding: 3rem 0rem 0rem 0rem;
 }
 
 main {
@@ -69,8 +60,9 @@ section {
 
 .alerta {
     background: #f44336;
-    padding: 5px;
     border-radius: 5px;
+    padding: .5rem;
+    margin: 1rem;
 }
 
 /* CLASS PARA FORMATAR COM JS */

@@ -6,7 +6,7 @@ let formulario = document.querySelector('form')
 let btnCalcular = document.querySelector('#btnCalcular')
 let btnLimpar = document.querySelector('#btnLimpar')
 
-// selecionar caixas de texto por id
+// Selecionando caixas de texto por id
 
 let cxN1 = document.querySelector('#n1')
 let cxN2 = document.querySelector('#n2')
@@ -14,13 +14,13 @@ let cxN3 = document.querySelector('#n3')
 let cxMedia = document.querySelector('#media')
 let cxSituacao = document.querySelector('#situacao')
 
-// CALCULAR MEDIA
+// Calculando media
 
 function calcularMedia(n1, n2, n3) {
     return (n1 + n2 + n3) / 3
 }
 
-// DEFINIR SITUACAO FINAL COM BASE NA MEDIA
+// Definindo a situação final 
 
 function situacaoFinal(mediaFinal) {
     let situacaoFinal = ''
@@ -35,7 +35,7 @@ function situacaoFinal(mediaFinal) {
     return situacaoFinal
 }
 
-// FORMATAR A CAIXA DE SITUACAO FINAL
+// Formatando a caixa de situação final
 
 function formatarSituacao(situacaoFinal) {
     console.log('Situação Final ' + situacaoFinal)
@@ -67,30 +67,63 @@ function formatarSituacao(situacaoFinal) {
     } 
 }
 
-// VALIDAR E GERAR FLASH MESSAGE
+// Gerando a flash message
+
 function validarNumero(numero) {
     let num1 = cxN1.value
     let num2 = cxN2.value
     let num3 = cxN3.value
     if(num1 < 0 || num1 > 10 || num2 < 0 || num2 > 10 || num3 < 0 || num3 > 10) {
-        // limpar form
+
+// Limpando o formulario
         formulario.reset() 
         aviso.textContent = 'Digite uma nota entre 0.0 e 10.0'
         aviso.classList.add('alerta')
         setTimeout(function(){
             aviso.textContent = ''
             aviso.classList.remove('alerta')
-        }, 3000);
+        }, 5000);
     }
 }
 
-// CALCULAR A MEDIA APOS O CLICK NO BOTAO
+// Gerando um alerta de erro caso haja um campo vazio 
+
+function calcular() {
+
+    document.getElementById("n2").style.borderColor = "#5552ff";
+    document.getElementById("n2").style.borderColor = "#5552ff";
+    document.getElementById("n2").style.borderColor = "#5552ff";
+    
+        if(document.getElementById("n1").value == "") {
+            alert("Preencha os campos corretamente");
+                document.getElementById("n1").style.borderColor = "red";
+                document.getElementById("n1").focus();
+            return false;
+        }
+
+        if(document.getElementById("n2").value == "") {
+            alert("Preencha os campos corretamente");
+                document.getElementById("n2").style.borderColor = "red";
+                document.getElementById("n2").focus();
+            return false;
+            }
+
+        if(document.getElementById("n3").value == "") {
+            alert("Preencha os campos corretamente");
+                document.getElementById("n3").style.borderColor = "red";
+                document.getElementById("n3").focus();
+            return false;
+            }
+    }
+
+
+// Calculando a media apos o click 
 
 btnCalcular.addEventListener('click', function(e) {
     console.log('Calcular Média')
 
-// pegar o valor que esta dentro das caixas
-// usar metodo parseFloat p converter string p float
+// pegando o valor que esta dentro das caixas
+// Passando os valores para float
 
     let n1 = parseFloat(cxN1.value)
     let n2 = parseFloat(cxN2.value)
@@ -113,7 +146,8 @@ btnCalcular.addEventListener('click', function(e) {
     e.preventDefault()
 })
 
-// APOS LIMPAR TIRAR AS CLASS DA CX SITUACAO
+// Apos limpar o formulario remover o alerta
+
 btnLimpar.addEventListener('click', function() {
     cxSituacao.classList.remove('aprovado')
     cxSituacao.classList.remove('reprovado')
