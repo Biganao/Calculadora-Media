@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
-
 * {
     margin: 0;
     padding: 0;
@@ -61,8 +60,8 @@ section {
 .alerta {
     background: #f44336;
     border-radius: 5px;
-    padding: .5rem;
-    margin: 1rem;
+    padding: .3rem;
+    margin: .3rem;
 }
 
 /* CLASS PARA FORMATAR COM JS */
