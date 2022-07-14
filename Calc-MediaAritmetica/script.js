@@ -1,6 +1,7 @@
 // Selecionando IDs e tags do CSS
 
 let aviso = document.querySelector('#aviso')
+let aviso2 = document.querySelector('#aviso2')
 let formulario = document.querySelector('form')
 
 let btnCalcular = document.querySelector('#btnCalcular')
@@ -93,23 +94,26 @@ function calcular() {
     document.getElementById("n1").style.borderColor = "#5552ff";
     document.getElementById("n2").style.borderColor = "#5552ff";
     document.getElementById("n3").style.borderColor = "#5552ff";
+        aviso2.textContent = "Preencha os campos corretamente"
+        aviso2.classList.add('alerta')
+            setTimeout(function(){
+                aviso.textContent = ''
+                aviso.classList.remove('alerta')
+            }, 5000);
     
         if(document.getElementById("n1").value == "") {
-            alert("Preencha os campos corretamente");
                 document.getElementById("n1").style.borderColor = "red";
                 document.getElementById("n1").focus();
             return false;
         }
 
-        if(document.getElementById("n2").value == "") {
-            alert("Preencha os campos corretamente");
+        if(document.getElementById("n2").value == "") {           
                 document.getElementById("n2").style.borderColor = "red";
                 document.getElementById("n2").focus();
             return false;
             }
 
-        if(document.getElementById("n3").value == "") {
-            alert("Preencha os campos corretamente");
+        if(document.getElementById("n3").value == "") {   
                 document.getElementById("n3").style.borderColor = "red";
                 document.getElementById("n3").focus();
             return false;
