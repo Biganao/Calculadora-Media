@@ -90,9 +90,9 @@ function validarNumero(numero) {
 
 function calcular() {
 
+    document.getElementById("n1").style.borderColor = "#5552ff";
     document.getElementById("n2").style.borderColor = "#5552ff";
-    document.getElementById("n2").style.borderColor = "#5552ff";
-    document.getElementById("n2").style.borderColor = "#5552ff";
+    document.getElementById("n3").style.borderColor = "#5552ff";
     
         if(document.getElementById("n1").value == "") {
             alert("Preencha os campos corretamente");
