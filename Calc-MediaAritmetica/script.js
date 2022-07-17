@@ -97,8 +97,8 @@ function calcular() {
         aviso2.textContent = "Preencha os campos corretamente"
         aviso2.classList.add('alerta')
             setTimeout(function(){
-                aviso.textContent = ''
-                aviso.classList.remove('alerta')
+                aviso2.textContent = ''
+                aviso2.classList.remove('alerta')
             }, 5000);
     
         if(document.getElementById("n1").value == "") {
