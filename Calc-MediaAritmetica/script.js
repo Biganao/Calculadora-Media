@@ -77,6 +77,7 @@ function validarNumero(numero) {
     if(num1 < 0 || num1 > 10 || num2 < 0 || num2 > 10 || num3 < 0 || num3 > 10) {
 
 // Limpando o formulario
+
         formulario.reset() 
         aviso.textContent = 'Digite uma nota entre 0.0 e 10.0'
         aviso.classList.add('alerta')
@@ -94,32 +95,43 @@ function calcular() {
     document.getElementById("n1").style.borderColor = "#5552ff";
     document.getElementById("n2").style.borderColor = "#5552ff";
     document.getElementById("n3").style.borderColor = "#5552ff";
-        aviso2.textContent = "Preencha os campos corretamente"
-        aviso2.classList.add('alerta')
-            setTimeout(function(){
-                aviso2.textContent = ''
-                aviso2.classList.remove('alerta')
-            }, 5000);
-    
+
         if(document.getElementById("n1").value == "") {
                 document.getElementById("n1").style.borderColor = "red";
                 document.getElementById("n1").focus();
+                    aviso2.textContent = "Preencha os campos corretamente"
+                    aviso2.classList.add('alerta')
+                        setTimeout(function(){
+                    aviso2.textContent = ''
+                    aviso2.classList.remove('alerta')
+                }, 5000);
             return false;
         }
 
         if(document.getElementById("n2").value == "") {           
                 document.getElementById("n2").style.borderColor = "red";
                 document.getElementById("n2").focus();
+                    aviso2.textContent = "Preencha os campos corretamente"
+                    aviso2.classList.add('alerta')
+                        setTimeout(function(){
+                    aviso2.textContent = ''
+                    aviso2.classList.remove('alerta')
+                }, 5000);
             return false;
             }
 
         if(document.getElementById("n3").value == "") {   
                 document.getElementById("n3").style.borderColor = "red";
                 document.getElementById("n3").focus();
+                    aviso2.textContent = "Preencha os campos corretamente"
+                    aviso2.classList.add('alerta')
+                        setTimeout(function(){
+                    aviso2.textContent = ''
+                    aviso2.classList.remove('alerta')
+                }, 5000);
             return false;
             }
     }
-
 
 // Calculando a media apos o click 
 
