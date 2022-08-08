@@ -106,6 +106,10 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
 .cx, input[type=text] {
     border-radius: 5px;
 }
@@ -204,18 +208,14 @@ input::-webkit-inner-spin-button {
     
 }
 
-button:hover {
-    filter: drop-shadow(.4rem .6rem .7rem #272530);
-}
-
 #btnCalcular {
-    background: #1ca5b8;
+    background: #298692;
     margin-left: 2.4rem;
 }
 
 #btnLimpar {
     background: #e90a0a;
-    margin-left: 4rem;
+    margin-left: 3.7rem;
 }
 
 #btnCalcular,
@@ -223,5 +223,19 @@ button:hover {
     border: 1.5px solid #212027;
     width: 4.5rem;
     height: 2.25rem;
+    transition-duration: .4s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+}
 
+#btnCalcular:hover {
+    background: #3fa9b8;
+    border: none;
+    filter: drop-shadow(.1rem .1rem .2rem #1b90a0);
+}
+
+#btnLimpar:hover {
+    background: #fc2020;
+    border: none;
+    filter: drop-shadow(.1rem .1rem .2rem #ff0000);
 }

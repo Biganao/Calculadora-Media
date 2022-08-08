@@ -21,15 +21,28 @@ function calcularMedia(n1, n2, n3) {
     return (n1 + n2 + n3) / 3
 }
 
+// Regex do formulario
+
+function onlynumber(evt) {
+    var theEvent = evt || window.event;
+    var key = theEvent.keyCode || theEvent.which;
+    key = String.fromCharCode( key );
+    var regex = /^[0-9.]+$/;
+    if( !regex.test(key) ) {
+       theEvent.returnValue = false;
+       if(theEvent.preventDefault) theEvent.preventDefault();
+    }
+ }
+
 // Definindo a situação final 
 
 function situacaoFinal(mediaFinal) {
     let situacaoFinal = ''
     
     if (mediaFinal >= 6) {
-        situacaoFinal = 'Aprovado(a)'
+        situacaoFinal = 'Apto(a)'
     } else if (mediaFinal <= 3) {
-        situacaoFinal = 'Reprovado(a)'
+        situacaoFinal = 'Inapto(a)'
     } else {
         situacaoFinal = 'Recuperação'
     }
