@@ -64,21 +64,6 @@ section {
     margin: .3rem;
 }
 
-/* CLASS PARA FORMATAR COM JS */
-
-
-.aprovado {
-    color: #64dd17; 
-}
-
-.reprovado {
-    background: #f44336;
-}
-
-.recuperacao {
-    background: #ffc107;
-}
-
 /* FORMULARIO */
 
 form {

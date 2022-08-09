@@ -109,7 +109,7 @@ function calcular() {
     document.getElementById("n2").style.borderColor = "#5552ff";
     document.getElementById("n3").style.borderColor = "#5552ff";
 
-        if(document.getElementById("n1").value == "") {
+        if(document.getElementById("n1").value == "") {           
                 document.getElementById("n1").style.borderColor = "red";
                 document.getElementById("n1").focus();
                     aviso2.textContent = "Preencha os campos corretamente"
@@ -119,7 +119,7 @@ function calcular() {
                     aviso2.classList.remove('alerta')
                 }, 5000);
             return false;
-        }
+            }
 
         if(document.getElementById("n2").value == "") {           
                 document.getElementById("n2").style.borderColor = "red";
